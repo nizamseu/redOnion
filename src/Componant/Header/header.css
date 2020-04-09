@@ -1,0 +1,12 @@
+.header{
+    background-image: url("../../red\ onion\ resources/bannerbackground.png");
+    width: 100%;
+    height: 600px;
+    margin:  auto;
+}
+.header input{
+    width: 30%;
+    height: 40px;
+    border: none;
+    border-radius: 30px;
+}

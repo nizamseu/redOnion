@@ -1,0 +1,29 @@
+.lunch Link:hover{
+    
+    /* border: 1px solid gray; */
+    border: none;
+    border-radius: 10px;
+}
+.lunch Link{
+    border: none;
+    background: white;
+}
+.lunch-main{
+    
+    margin-left: 35px;
+   width: 400px;
+   height: 500px;
+   /* border: 1px solid gray; */
+   margin-bottom: 35px;
+   float: left;
+   padding: 10px;
+   
+}
+.lunch-main:hover{
+    box-shadow: 0px 7px  10px gray;
+    text-decoration: none;
+}
+.lunch-img img{
+    width: 50%;
+    
+}
