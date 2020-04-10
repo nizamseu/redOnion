@@ -8,7 +8,7 @@ const Lunch = (props) => {
    
     return (
         <div className="lunch">
-        <Link  to="/view"  className="lunch-main" >
+        <Link  to={"/" + key}  className="lunch-main" >
             <button onClick={() => props.handlEvent(props.usrData)}>
             { <div>
             <div className="lunch-img">

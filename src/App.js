@@ -12,7 +12,10 @@ import NotFound from './Componant/NotFound/NotFound';
 import FoodItem from './Componant/FoodItem/FoodItem';
 import View from './Componant/View/View';
 import HomeComponant from './Componant/HomeComponant/HomeComponant';
+
 function App() {
+ 
+
   return (
     <div className="App">
        <Router>
@@ -26,7 +29,7 @@ function App() {
          <FoodItem></FoodItem>
         </Route>
 
-        <Route path="/view">
+        <Route path="/:fkey">
           <View></View>
         </Route>
 
