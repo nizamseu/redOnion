@@ -1,6 +1,9 @@
 import React from 'react';
+import data from '../../Data/data'
 
-const View = () => {
+const View = (props) => {
+
+
     return (
         <div>
             <h1>View Section</h1>
