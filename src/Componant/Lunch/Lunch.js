@@ -9,22 +9,22 @@ const Lunch = (props) => {
     return (
         <div className="lunch">
         <Link  to={"/" + key}  className="lunch-main" >
-            <button onClick={() => props.handlEvent(props.usrData)}>
+            
             { <div>
             <div className="lunch-img">
                  <img src={img} alt="" />
              </div>
              
              <div className="lunch-contant">
-                 <h1> {name}</h1>
+                 <h5> {name}</h5>
                  <p> {shortDetails} </p>
-                 <h1>$ {price} </h1>
+                 <h4>${price} </h4>
                  
              </div>
              
          </div>
          }
-            </button>
+         
         
             
         </Link>

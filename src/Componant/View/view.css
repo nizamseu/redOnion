@@ -1,0 +1,32 @@
+.viewMain{
+display: flex;
+margin: 10px 10% 0px 10%;
+}
+.first-view-half{
+
+    width: 50%;
+    text-align: left;
+    margin-left: 30px;
+    padding-top: 30px;
+}
+.second-view-half img{
+    
+    margin-right: 30px;
+    max-width: 90%;
+}
+.btn{
+    background-color: crimson;
+    border-radius: 20px;
+    padding: 5px;
+    width: 100px;
+    color: white;
+    margin-top: 20px;
+}
+.sortimg{
+    margin-top: 30px;
+    margin-left: 10px;
+}
+.sortimg img{
+    margin-left: 20px;
+    width: 150px;
+}
