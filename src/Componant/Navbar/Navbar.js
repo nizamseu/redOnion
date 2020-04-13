@@ -4,7 +4,7 @@ import './navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Navbar = (props) => {
-    console.log(props.food);
+    console.log(props);
     
     return (
         <div  className=" logo shadow-sm p-3 mb-5 bg-white rounded">

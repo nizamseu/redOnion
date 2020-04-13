@@ -10,7 +10,7 @@ import Navbar from '../Navbar/Navbar';
 
 const View = (props) => {
     const [count,setCount]=useState(0)
-   
+   const [addValue,setAddValue]=useState([])
     const {fkey}=useParams();
     const food = data.find(pd => pd.key == fkey);
     const {name,img,price,details,key}=food;
@@ -22,17 +22,15 @@ const View = (props) => {
         count>0 ?setCount(count-1)
         :setCount(0)
     }
-     const itemCounter= (key)=>{
-         console.log(key);    
-     }
+    
      
    
-     
+     food.quantity=count;
 
-     
+    
     return (
         <div>
-        <Navbar food={food}></Navbar>
+       <Navbar addValue={addValue}></Navbar>
             <div className="viewMain">
              <div className="first-view-half">
                  <h1> {name} </h1>
@@ -51,7 +49,7 @@ const View = (props) => {
                         
         <div>
                         
-         <button onClick={() => itemCounter(key)} className="btn">add</button>
+         <button onClick={ () =>setAddValue(food)} className="btn">add</button>
                         
         </div>
                     
