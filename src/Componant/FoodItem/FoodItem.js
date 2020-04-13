@@ -8,18 +8,17 @@ import Lunch from '../Lunch/Lunch';
 const FoodItem = () => {
     const [userData,setUserData] = useState(data);
      const handlEvent= (dataReturn) => {
-         console.log("clicked",dataReturn);
-         
-         
-         
+        //  console.log("clicked",dataReturn);   
      }
     
     return (
         <div>
-        <h1>Hello</h1>
+            <h1>Hello</h1>
            {
               userData.map(userdata => <Lunch handlEvent={handlEvent} usrData={userdata}></Lunch>)
            }
+
+           
         </div>
     );
 };

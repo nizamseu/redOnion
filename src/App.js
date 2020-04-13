@@ -10,44 +10,47 @@ import {
 } from "react-router-dom";
 import NotFound from './Componant/NotFound/NotFound';
 import FoodItem from './Componant/FoodItem/FoodItem';
-import View from './Componant/View/View';
+import View, { DataProvider } from './Componant/View/View';
 import HomeComponant from './Componant/HomeComponant/HomeComponant';
+import Navbar from './Componant/Navbar/Navbar';
+import Login from './Componant/Login/Login';
 
 function App() {
  
 
   return (
+    <Router>
     <div className="App">
-       <Router>
+      <Navbar></Navbar>
+      
         <Switch>
-
-        {/* <Route path="/lunch">
-          <Lunch></Lunch>
-        </Route> */}
-        
         <Route path="/fooditem">
-         <FoodItem></FoodItem>
+            <FoodItem></FoodItem>
         </Route>
+
+        <Route path="/login">
+        <Login></Login>
+       </Route>
 
         <Route path="/:fkey">
-          <View></View>
+              <View></View>
         </Route>
-
-      {/* <Route path="/home">
-       <HomeComponant></HomeComponant>
-      </Route> */}
 
         <Route exact path="/">
-        <FoodItem></FoodItem>
+            <FoodItem></FoodItem>
         </Route>
+        
+      
 
         <Route path="*">
         <NotFound></NotFound>
         </Route>
 
       </Switch>
-    </Router>
+   
+ 
     </div>
+    </Router>
   );
 }
 

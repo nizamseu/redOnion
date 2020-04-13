@@ -1,0 +1,27 @@
+.logo{
+    height: 100px;
+    position: fixed;
+    width: 100%;
+}
+.logo img{
+    height: 70px;
+    float: left;
+}
+.sign{
+    margin-top: 15px;
+    font-size: 20px;
+    float: right;
+    margin-right: 30px;
+}
+.signIn{
+    margin-right: 30px;
+    color: gray;
+}
+.signUP{
+   background-color: rgb(228, 66, 98);
+   border-radius: 15px;
+   width: 100px;
+   height: 35px;
+   color: white;
+   border: none;
+}
