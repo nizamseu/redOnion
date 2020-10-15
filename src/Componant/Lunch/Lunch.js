@@ -1,10 +1,10 @@
 import React from 'react';
 import './lunch.css'
 import { Link } from 'react-router-dom';
-import View from '../View/View';
+
 
 const Lunch = (props) => {
-    const {name,shortDetails,details,price,img,key}=props.usrData;
+    const {name,shortDetails,price,img,key}=props.usrData;
    
     return (
         <div className="lunch">

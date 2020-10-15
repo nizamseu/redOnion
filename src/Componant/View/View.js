@@ -1,36 +1,41 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './view.css';
 import data from '../../Data/data'
 import { useParams} from 'react-router-dom';
 import { useState } from 'react';
-import Nbar from '../Nbar/Nbar';
 import Navbar from '../Navbar/Navbar';
+import { MyContext } from '../../App';
 
 
 
-const View = (props) => {
-    const [count,setCount]=useState(0)
-   const [addValue,setAddValue]=useState([])
+
+const View = () => {
+    const [contextData,setContextData]= useContext(MyContext)
+    const [count,setCount]=useState(1)
     const {fkey}=useParams();
     const food = data.find(pd => pd.key == fkey);
     const {name,img,price,details,key}=food;
+
+
+    // const handlepluse= ()=>{
+    //    setCount(count+1)
+    // }
+    // const handleMinus= ()=>{
+    //     count>1 ?setCount(count-1)
+    //     :setCount(1)
+    // }
     
-    const handlepluse= ()=>{
-       setCount(count+1)
-    }
-    const handleMinus= ()=>{
-        count>0 ?setCount(count-1)
-        :setCount(0)
-    }
-    
+    const handlEvent= (item) => {
+        const newItem=[...contextData,item]
+    setContextData(newItem)
      
+     }
    
      food.quantity=count;
-
-    
+     
     return (
         <div>
-       <Navbar addValue={addValue}></Navbar>
+       <Navbar></Navbar>
             <div className="viewMain">
              <div className="first-view-half">
                  <h1> {name} </h1>
@@ -49,7 +54,7 @@ const View = (props) => {
                         
         <div>
                         
-         <button onClick={ () =>setAddValue(food)} className="btn">add</button>
+         <button onClick={()=>handlEvent(food)} className="btn">add</button>
                         
         </div>
                     

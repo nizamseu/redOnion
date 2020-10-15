@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createContext, useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Lunch from './Componant/Lunch/Lunch';
@@ -10,15 +10,15 @@ import {
 } from "react-router-dom";
 import NotFound from './Componant/NotFound/NotFound';
 import FoodItem from './Componant/FoodItem/FoodItem';
-import View, { DataProvider } from './Componant/View/View';
-import HomeComponant from './Componant/HomeComponant/HomeComponant';
+import View from './Componant/View/View';
 import Navbar from './Componant/Navbar/Navbar';
 import Login from './Componant/Login/Login';
-
+export const MyContext=React.createContext()
 function App() {
- 
-
+ const [cart,setCart]=useState([])
+console.log("cart",cart);
   return (
+    <MyContext.Provider value={[cart,setCart]}>
     <Router>
     <div className="App">
       <Navbar></Navbar>
@@ -51,6 +51,7 @@ function App() {
  
     </div>
     </Router>
+    </MyContext.Provider>
   );
 }
 
