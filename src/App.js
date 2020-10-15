@@ -13,6 +13,7 @@ import FoodItem from './Componant/FoodItem/FoodItem';
 import View from './Componant/View/View';
 import Navbar from './Componant/Navbar/Navbar';
 import Login from './Componant/Login/Login';
+import Review from './Componant/review/Review';
 export const MyContext=React.createContext()
 function App() {
  const [cart,setCart]=useState([])
@@ -21,7 +22,7 @@ console.log("cart",cart);
     <MyContext.Provider value={[cart,setCart]}>
     <Router>
     <div className="App">
-      <Navbar></Navbar>
+       <Navbar></Navbar>
       
         <Switch>
         <Route path="/fooditem">
@@ -32,15 +33,21 @@ console.log("cart",cart);
         <Login></Login>
        </Route>
 
-        <Route path="/:fkey">
+      
+
+        <Route path="/view/:fkey">
               <View></View>
         </Route>
 
+       
+      
         <Route exact path="/">
             <FoodItem></FoodItem>
         </Route>
         
-      
+        <Route path="/review">
+          <Review></Review>
+        </Route>
 
         <Route path="*">
         <NotFound></NotFound>
@@ -48,7 +55,7 @@ console.log("cart",cart);
 
       </Switch>
    
- 
+     
     </div>
     </Router>
     </MyContext.Provider>

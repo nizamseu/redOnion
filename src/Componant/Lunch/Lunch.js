@@ -8,7 +8,7 @@ const Lunch = (props) => {
    
     return (
         <div className="lunch">
-        <Link  to={"/" + key}  className="lunch-main" >
+        <Link  to={"/view/" + key}  className="lunch-main" >
             
             { <div>
             <div className="lunch-img">

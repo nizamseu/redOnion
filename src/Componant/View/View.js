@@ -14,7 +14,7 @@ const View = () => {
     const [count,setCount]=useState(1)
     const {fkey}=useParams();
     const food = data.find(pd => pd.key == fkey);
-    const {name,img,price,details,key}=food;
+    const {name,img,price,details}=food;
 
 
     // const handlepluse= ()=>{

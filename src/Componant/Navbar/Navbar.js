@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import Checkout from '../CheckOut/Checkout';
 import { MyContext } from '../../App';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   
@@ -20,7 +21,12 @@ const Navbar = () => {
             <img src={Logo} alt=""/>
             </div>
             <div className="sign d-flex align-items-center">
-             <p>count: {cart.length} me</p>
+             <Link to="/review">
+                <button className="signUP">
+                    count: {cart.length}
+                </button>
+             </Link>
+            
                 {/* <a href = "#" className="signIn" > Sign In</a> */}
                 <button className="signUP">
                     Sign Up
